@@ -1,0 +1,37 @@
+<% layout('layouts/boilerplate') %> 
+
+<link rel="stylesheet" href="stylesheets/laimesti.css">
+
+<main class="my-auto" id="laimesti">
+    <section class="container">
+
+
+<h1>Visi laimesti</h1>
+    <div>
+        <a href="/laimesti/jauns">Pievienot laimestu</a>
+    </div>
+        <% for (let winning of winnings) { %>
+            <div class="card mb-3">
+                <div class="row">
+                    <div class="col-md-4">
+                      <%if(winning.image.length){%> 
+                        <img class="img-fluid" alt="" src="<%=winning.image[0].url%>">
+                        <%}else{%> 
+                        <img class="img-fluid" alt="" src="https://res.cloudinary.com/dfjnipy1g/image/upload/v1666774976/KaLaimet/ii10olej089skyolkwoi.jpg">
+                            <%}%> 
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title"><%= winning.title %> </h5>
+                            <p class="card-text"><%= winning.description %></p>
+
+                            <a class="btn btn-primary" href="/laimesti/<%= winning._id %> ">Apskatīt</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <% } %> 
+
+
+    </section>
+</main>     

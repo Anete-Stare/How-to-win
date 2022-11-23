@@ -1,0 +1,70 @@
+#mainView {
+    background-color: #f4ffb2;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* color: #bdb2ff;  other violet color*/
+/* background-color: ; other background yellowish color */
+
+#mainNavbar .navbar-brand {
+    color: #06114F;
+    font-size: 2rem;
+    font-weight: bold;
+
+}
+
+#mainNavbar {
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: #f4ffb2;
+}
+
+#mainNavbar .nav-link{
+    color:#06114F;
+}
+
+
+#mainNavbar .nav-link:hover{
+    color: #14008b;
+}
+
+/* #mainView .container{
+    margin: 25px 50px 25px 50px;
+} */
+
+@media (max-width: 1399px) {
+    #mainNavbar .navbar-toggler {
+        margin-right: 140px;
+    }
+}
+
+#mainNavbar .navbar-toggler{
+    color: #06114F;   
+}
+
+
+#footerDiv{
+    margin: 0px 0px;
+    font-size: 14px;
+    padding-left: 14px;
+}
+
+.navbar-nav > li{
+    padding-left:10px;
+    padding-right:10px;
+  }
+
+#autorizacija .nav-link{
+    color: #A782EC;
+}
+
+.container-fluid{
+    padding: 0px 0px 0px 14px; 
+    margin-top: 20px;
+}
+
+
+#mainNavbar.scrolled {
+    background:rgb(255,178,244);
+}
+

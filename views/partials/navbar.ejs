@@ -1,0 +1,73 @@
+ <nav id="mainNavbar" class="navbar fixed-top navbar-expand-xxl navbar-light">
+    <div class="container-fluid mt-4 mb-0">
+      <a class="navbar-brand" href="#">
+        <img src="/imgs/icon.png" width="40" height="40" class="d-inline-block align-top" alt="" id="logo">
+        KĀ LAIMĒT
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto mb-0 mb-lb-0 px-2"> 
+              <li class="nav-item">
+                <a class="nav-link" href="/">Sākums</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/par-ka-laimet">Par Kā laimēt</a> 
+              </li>  
+              <li class="nav-item">
+                <a class="nav-link" href="/programma">7 soļu programma</a>  
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/laimesti">Laimesti</a>
+              </li>
+              <li class="nav-item"> 
+                <a class="nav-link" href="/laimesti/jauns">Jauns laimests</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav ms-auto mb-0 mb-lb-0 px-2" id="autorizacija"> 
+              <% if(!currentUser) { %> 
+                <li class="nav-item"> 
+                  <a class="nav-link" href="/pierakstities" >Pierakstīties</a>
+                </li>
+                <li class="nav-item"> 
+                  <a class="nav-link" href="/registreties" >Reģistrēties</a>
+                </li>
+                <% } else { %> 
+                <li class="nav-item"> 
+                  <a class="nav-link" href="/iziet" >Iziet</a>
+                </li>
+                <% } %> 
+            </ul>
+      </div>
+    </div>
+  </nav> 
+
+
+  <!-- <nav id="mainNavbar" class="navbar sticky-top navbar-expand-xl navbar-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">KĀ LAIMĒT</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+          <div class="navbar-nav">
+            <a class="nav-link" href="/">Sākums</a>
+            <a class="nav-link" href="/par-ka-laimet">Par Kā laimēt</a> 
+            <a class="nav-link" href="/septinu-solu-programma">7 soļu programma</a> 
+            <a class="nav-link" href="/laimesti">Laimesti</a>
+            <a class="nav-link" href="/laimesti/jauns">Jauns laimests</a>
+      </div>
+      <div class="navbar-nav ml-auto"> 
+        <% if(!currentUser) { %> 
+          <a class="nav-link" href="/pierakstities">Pierakstīties</a>
+          <a class="nav-link" href="/registreties">Reģistrēties</a>
+          <% } else { %> 
+          <a class="nav-link" href="/iziet">Iziet</a>
+          <% } %> 
+        </div>
+      </div>
+    </div>
+  </nav>  -->
+
+

@@ -1,0 +1,112 @@
+
+#homeButton {
+    border-color:  #A782EC;
+    background-color: #A782EC;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-width: 0.2rem;
+    border-radius: 25px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* #homeButton:hover {
+    background-color: #A782EC;
+    color: white;
+} */
+
+#heading{
+    color:  #A782EC;
+    font-weight: 700;
+}
+
+h3 {
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+/* .lead {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #06114F;
+    margin: 25px 0px 25px 0px;
+    font-size: 28px;
+} */
+
+#textBox {
+    padding: 0px 15px 0px 15px;
+}
+
+#home{
+    padding: 140px 50px 0px 50px;
+    margin: 0px 0px;
+}
+/* 
+old padding home 70px top */
+
+#imageBox{
+    padding: 0px 100px 0px 15px;
+}
+
+#image{
+    border-radius: 15px 100px 15px 100px;
+}
+
+.container-fluid{
+    padding-bottom: 0px;
+}
+
+
+@media (max-width: 600px) {
+    #home {
+    padding: 120px 20px 0px 20px;  
+    }
+
+}
+
+@media (max-width: 991px) {
+    #imageBox{
+        padding-right: 15px;
+        }
+}
+
+/* body{
+    background-color: a0c4ff;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url('https://images.unsplash.com/photo-1647221598398-934ed5cb0e4f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2064&q=80');
+    background-size: cover;
+    background-position: center;
+    text-shadow: 0 0.05rem 0.1rem rgba(0,0,0,0.5);
+    box-shadow: inset 0 0 5rem rgba(0,0,0,0.5); 
+
+}
+
+.cover-container {
+    max-width: 60vw;
+}
+
+.nav-link {
+    padding: 0.25rem 0;
+    font-weight: 700;
+    color: rgba(255,255,255,0.5);
+    margin-left: 1rem;
+    border-bottom: 0.25rem solid transparent;
+}
+
+.nav-link:hover{
+    color: rgba(255,255,255,0.5);
+    border-bottom-color: rgba(255,255,255,0.5);
+}
+
+.nav-link:active{
+    color: white;
+    border-bottom-color: white;
+}
+
+.btn-secondary, .btn-secondary:hover{
+    color: #333;
+    text-shadow: none;
+} */
+
