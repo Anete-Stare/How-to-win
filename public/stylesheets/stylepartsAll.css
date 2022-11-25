@@ -3,20 +3,24 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-/* color: #bdb2ff;  other violet color*/
-/* background-color: ; other background yellowish color */
+#mainNavbar {
+    font-size: 1rem;
+    font-weight: 600;
+} 
 
-#mainNavbar .navbar-brand {
+.navbar-brand {
     color: #06114F;
     font-size: 2rem;
     font-weight: bold;
-
 }
 
+#mainNavbar .nav-link{
+    color:#06114F;
+}
 
 .scrolled {
     background-color: #A782EC;
-    color: white;
+    box-shadow: 0 3px 10px rgba(167, 130, 236, 0.15);
 }
 
 
@@ -24,16 +28,6 @@
 /* .scrolled li a {
     color: white;
   } */
-
-#mainNavbar {
-    font-size: 1rem;
-    font-weight: 600;
-} 
-
-#mainNavbar .nav-link{
-    color:#06114F;
-}
-
 
 
 /* #mainView .container{
