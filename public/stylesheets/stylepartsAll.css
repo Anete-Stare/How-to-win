@@ -23,6 +23,9 @@
     box-shadow: 0 3px 10px rgba(167, 130, 236, 0.15);
 }
 
+#mainNavbar .scrolled{
+    color: white !important;
+}
 
 
 /* .scrolled li a {
