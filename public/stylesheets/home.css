@@ -71,6 +71,13 @@ old padding home 70px top */
         }
 }
 
+@media (max-width: 420px) {
+    #home {
+    padding: 140px 20px 0px 20px;  
+    }
+
+}
+
 /* body{
     background-color: a0c4ff;
     height: 100vh;

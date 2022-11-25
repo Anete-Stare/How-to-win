@@ -14,6 +14,18 @@ h3{
 }
 
 
+@media (max-width: 600px) {
+    #programma {
+        padding: 120px 20px 0px 20px;  
+    }
+}
+@media (max-width: 420px) {
+    #programma {
+    padding: 140px 20px 0px 20px;  
+    }
+}
+
+
 #viens, #divi, #tris, #cetri, #pieci, #sesi, #septini{
     font-size: 4rem;
     font-weight: 600;
@@ -77,8 +89,4 @@ li{
     }
 }
 
-@media (max-width: 600px) {
-    #programma {
-        padding: 120px 20px 0px 20px;  
-    }
-}
+

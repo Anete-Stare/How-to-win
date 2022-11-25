@@ -3,6 +3,18 @@
     margin: 0px 0px;
 }
 
+@media (max-width: 600px) {
+    #laimesti {
+    padding: 120px 20px 0px 20px;  
+    }
+}
+
+@media(max-width: 420px) {
+    #laimesti{
+        padding: 140px 20px 0px 20px;  
+    }
+}
+
 h1{
     color: #A782EC;
     font-weight: 700;

@@ -17,6 +17,13 @@ p{
     }
 }
 
+@media(max-width: 420px) {
+    #about{
+        padding: 140px 20px 0px 20px;  
+    }
+}
+
+
 
 h1{
     color: #A782EC;
