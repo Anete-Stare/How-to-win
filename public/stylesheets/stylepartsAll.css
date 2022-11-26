@@ -3,10 +3,14 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-#mainNavbar .nav-link{
+.nav-link{
     font-size: 1rem;
     font-weight: 600;
+    color:#06114F;
+    background-color: #f4ffb2;
 } 
+
+
 
 .navbar-brand {
     color: #06114F;
@@ -14,16 +18,18 @@
     font-weight: bold;
 }
 
-#mainNavbar .nav-link{
+/* .nav-link{
     color:#06114F;
-}
+    background-color: #f4ffb2;
+} */
+
+/* #mainNavbar{
+    background-color: #f4ffb2;
+} */
 
 .scrolled {
     background-color: #A782EC;
     box-shadow: 0 3px 10px rgba(167, 130, 236, 0.15);
-}
-
-#mainNavbar .scrolled{
     color: white !important;
 }
 

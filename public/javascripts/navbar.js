@@ -1,4 +1,6 @@
 
+
+
 const navbar = document.querySelector('#mainNavbar')
 const links =document.querySelectorAll('.nav-link')
 
@@ -16,3 +18,15 @@ const links =document.querySelectorAll('.nav-link')
                 })
             }
         }
+
+
+const toggle = document.querySelector('.navbar-toggler')
+const list = document.querySelector('#navbarNav')
+
+window.onclick = function() {
+    if(toggle.onclick===true){
+        list.classList.add('test')
+    } else{
+      list.classList.remove('test')
+    }
+}
