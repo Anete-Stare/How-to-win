@@ -3,6 +3,11 @@
     margin: 0px 0px;
 }
 
+#jaunsLaimests{
+    padding: 140px 50px 0px 50px;
+    margin: 0px 0px;
+}
+
 @media (max-width: 600px) {
     #laimesti {
     padding: 120px 20px 0px 20px;  
@@ -25,4 +30,13 @@ h1{
     border-color:  #A782EC;
     background-color: #A782EC;
     color: white;
+}
+
+p{
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+a{
+  color:#06114F;
 }
