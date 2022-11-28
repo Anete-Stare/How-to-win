@@ -6,9 +6,12 @@
 .nav-link{
     font-size: 1rem;
     font-weight: 600;
-    color:#06114F;
     background-color: #f4ffb2;
 } 
+
+#mainNavbar .nav-link{
+    color:#06114F;
+}    
 
 
 
