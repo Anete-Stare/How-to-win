@@ -15,7 +15,7 @@
                 <label class="form-label" for="title">Laimesta nosaukums</label>
                 <input class="form-control" type="text" id="title" name="winning[title]" required>
                 <div class="valid-feedback">
-                    Looks good!
+                    Nosaukums pievienots!
                 </div>
             </div>
 
@@ -23,17 +23,23 @@
                 <label class="form-label" for="brand">Uzņēmums/Zīmols</label>
                 <input class="form-control" type="text" id="brand" name="winning[brand]" required>
                 <div class="valid-feedback">
-                    Looks good!
+                    Uzņēmums/Zīmols pievienots!
                 </div>
             </div>
 
             <div class="mb-3">
                 <label class="form-label" for="description">Apraksts</label>
                 <textarea class="form-control" type="text" id="description" name="winning[description]" required></textarea>
+                <div class="valid-feedback">
+                    Apraksts pievienots!
+                </div>
             </div>
             <div class="mb-3">
                 <label for="">Pievienot bildes</label>
-                <input class="form-control" type="file" id="image" name="image" multiple>
+                <input class="form-control" type="file" id="image" name="image" multiple required>
+                <div class="valid-feedback">
+                    Bildes pievienotas!
+                </div>
               </div>
             <div class="mb-3">
                 <div class="d-grid">
