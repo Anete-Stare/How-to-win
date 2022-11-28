@@ -14,6 +14,7 @@ ImageSchema.virtual('thumbnail').get(function() {
 
 const WinningSchema = new Schema ({
     title: String,
+    brand: String,
     image: [ImageSchema],
     description: String,
     author: {

@@ -12,8 +12,16 @@
             <div class="card-body">
         <form action="/laimesti" method="POST" novalidate class="validated-form" enctype="multipart/form-data">
             <div class="mb-3">
-                <label class="form-label" for="title">Nosaukums</label>
+                <label class="form-label" for="title">Laimesta nosaukums</label>
                 <input class="form-control" type="text" id="title" name="winning[title]" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" for="brand">Uzņēmums/Zīmols</label>
+                <input class="form-control" type="text" id="brand" name="winning[brand]" required>
                 <div class="valid-feedback">
                     Looks good!
                 </div>
