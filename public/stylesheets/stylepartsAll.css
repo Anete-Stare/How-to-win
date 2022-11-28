@@ -3,16 +3,19 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+.navbar{
+    background-color: #f4ffb2;
+}
+
 .nav-link{
     font-size: 1rem;
     font-weight: 600;
-    background-color: #f4ffb2;
 } 
+
 
 #mainNavbar .nav-link{
     color:#06114F;
 }    
-
 
 
 .navbar-brand {
