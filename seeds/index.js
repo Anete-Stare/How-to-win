@@ -22,7 +22,8 @@ const seedDB = async ()=> {
         const win = new Winning({
           //YOUR USER ID
             author: '635786dae627c437ffd91bb8', //  this from yelpcamp for campgrounds '6345147096209a317563a346',
-            title: `${sample(brands)} ${sample(things)}`,
+            title: `${sample(things)}`,
+            brand: `${sample(brands)}`,
             description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi ratione molestias, tenetur fuga, labore deserunt quod nisi provident illum eum nam officia facere explicabo ex nemo reiciendis aut quidem quas?',
             image:  [
               {

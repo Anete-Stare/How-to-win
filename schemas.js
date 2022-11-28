@@ -28,6 +28,7 @@ const Joi = BaseJoi.extend(extension);
 module.exports.winningSchema = Joi.object({
     winning: Joi.object({
         title: Joi.string().required().escapeHTML(),
+        brand: Joi.string().required().escapeHTML(),
         description: Joi.string().required().escapeHTML()
     }).required(),
     deleteImages: Joi.array()
