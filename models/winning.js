@@ -11,6 +11,10 @@ ImageSchema.virtual('thumbnail').get(function() {
     return this.url.replace('/upload','/upload/w_300');
 });
 
+ImageSchema.virtual('cardImage').get(function(){
+    return this.url.replace('/upload', '/upload/ar_4:3,c_crop');
+});
+
 
 const WinningSchema = new Schema ({
     title: String,
