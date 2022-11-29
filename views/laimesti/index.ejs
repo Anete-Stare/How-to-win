@@ -13,9 +13,6 @@ Dalīts prieks ir <b>dubultprieks</b> ! Iedvesmo citus piedalīties Instagram ko
     <div>
         <a href="/laimesti/jauns"><b>Pievienot laimestu</b></a>
     </div>
-
-
-
         <% for (let winning of winnings) { %>
             <div class="card mb-3">
                 <div class="row">
@@ -28,8 +25,8 @@ Dalīts prieks ir <b>dubultprieks</b> ! Iedvesmo citus piedalīties Instagram ko
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
-                            <h5 class="card-title"><%= winning.brand %> <%= winning.title %> </h5>
-                            <p class="card-text"><%= winning.description %></p>
+                            <h5 class="card-title fs-5 border-bottom border-2"><%= winning.brand %> <%= winning.title %> </h5>
+                            <p class="card-text fs-6"><%= winning.description %></p>
 
                             <a class="btn btn-primary" href="/laimesti/<%= winning._id %> ">Apskatīt</a>
                         </div>
@@ -37,7 +34,5 @@ Dalīts prieks ir <b>dubultprieks</b> ! Iedvesmo citus piedalīties Instagram ko
                 </div>
             </div>
         <% } %> 
-
-
     </section>
 </main>     

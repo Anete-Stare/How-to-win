@@ -59,6 +59,7 @@ p{
 
 a{
   color:#06114F;
+  font-weight: bold;
 }
 
 #formHeading{
@@ -66,3 +67,13 @@ a{
     color: #A782EC;
     font-weight: 700;
 }
+
+label{
+    font-weight: 600;
+}
+
+h5{
+    font-weight: bold;
+}
+
+
