@@ -61,4 +61,8 @@ a{
   color:#06114F;
 }
 
-
+#formHeading{
+    margin-top: 20px;
+    color: #A782EC;
+    font-weight: 700;
+}

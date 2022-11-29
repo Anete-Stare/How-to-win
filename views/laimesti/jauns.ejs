@@ -6,13 +6,17 @@
 
 
 <div class="row mt-0">
-    <h1 class="text-center">Jauns laimests</h1>
+    <h1>Jauns laimests</h1>
+    <p class="fs-4"> 
+        Dalīts prieks ir <b>dubultprieks</b> ! Iedvesmo citus piedalīties Instagram konkursos, <b>parādot savu laimestu</b>. Pastāsti, ja, saņemot balvu, esi piedzīvojis <b>kuriozu mirkli</b>, vai vienkārši <b>pasakies konkursa organizētājiem</b> par foršo laimestu. Tāpat vari komentēt arī citu iegūtos laimestus.
+        </p>
+        <p class="fs-5 text-center" id="formHeading">Pievieno savu laimestu, aizpildot formu:</p>
     <div class="col-md-6 offset-md-3">
         <div class="card shadow">
             <div class="card-body">
         <form action="/laimesti" method="POST" novalidate class="validated-form" enctype="multipart/form-data">
             <div class="mb-3">
-                <label class="form-label" for="title">Laimesta nosaukums</label>
+                <label class="form-label" for="title">Laimētais produkts</label>
                 <input class="form-control" type="text" id="title" name="winning[title]" required>
                 <div class="valid-feedback">
                     Nosaukums pievienots!
