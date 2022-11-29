@@ -11,9 +11,15 @@ const storage = new CloudinaryStorage({
     cloudinary,
     params: {
         folder: 'KaLaimet',
-        allowedFormats: ['jpeg', 'png', 'jpg']
+        allowedFormats: ['jpeg', 'png', 'jpg', 'heic'],
+        transformation: [
+            {width:400, height:300,gravity: "auto", crop: "fill"},
+        ],
+        format: 'jpg'
     }
 });
+
+
 
 module.exports = {
     cloudinary,
