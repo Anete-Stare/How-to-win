@@ -1,5 +1,5 @@
 const Winning = require('../models/winning');
-//const {cloudinary} = require('../cloudinary');
+const {cloudinary} = require('../cloudinary');
 
 
 module.exports.index = async (req, res) => {
