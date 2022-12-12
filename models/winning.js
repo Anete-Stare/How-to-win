@@ -8,7 +8,7 @@ const ImageSchema = new Schema({
 });
 
 ImageSchema.virtual('thumbnail').get(function() {
-    return this.url.replace('/upload','/upload/w_300');
+    return this.url.replace('/upload','/upload/h_250,w_300');
 });
 
 ImageSchema.virtual('cardImage').get(function(){
