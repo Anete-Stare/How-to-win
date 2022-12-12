@@ -4,6 +4,7 @@
   <main class="my-auto" id="pievienotsLaimests">
     <section class="container">
 
+      <h1>Izvēlētais laimests</h1>
   <div class="row">
     <div class="col-6">
       <div id="winningCarousel" class="carousel slide" data-bs-ride="carousel">
@@ -55,10 +56,10 @@
     </div>
  
       <% if(currentUser) { %>
-        <h4>Atstāj komentāru par laimestu</h4>
+        <h4 class="fs-4">Atstāj komentāru par laimestu</h4>
         <form action="/laimesti/<%= winning._id %>/atsauksmes/" method="POST" class="mb-3 validated-form" novalidate>
 
-          <!-- <div class="mb-3">
+          <div class="mb-3">
             <fieldset class="starability-basic">
               <input type="radio" id="no-rate" class="input-no-rate" name="review[rating]" value="1" checked
                 aria-label="No rating." />
@@ -73,10 +74,10 @@
               <input type="radio" id="first-rate5" name="review[rating]" value="5" />
               <label for="first-rate5" title="Amazing">5 zvaigznes</label>
             </fieldset>
-          </div> -->
+          </div>
 
           <div class="mb-3">
-            <label class="form-label" for="body">Komentāri</label>
+            <!-- <label class="form-label" for="body"></label> -->
             <textarea class="form-control" name="review[body]" id="body" cols="30" rows="3" required></textarea>
             <div class="valid-feedback">
               Looks good!
@@ -86,17 +87,15 @@
           </form>
           <% } %>
 
+          <h4 class="fs-4">Komentāri</h4>
           <% for(let review of winning.reviews) { %>
             <div class="card mb-3">
               <div class="card-body">
-                <h5 class="card-title">
-                  <%= review.author.username %>
+                <h5 class="card-title fs-5 border-bottom border-2">
+                 Autors: <%= review.author.username %>
                 </h5>
-                <p class="starability-result" data-rating="<%= review.rating %>">
-                  Novērtēts: <%= review.rating %> zvaigznes
-                </p>
                 <!-- <h6 class="card-subtitle mb-2 text-muted">By <%= review.author.username %> </h6> -->
-                <p class="card-text">Vērtējums: <%= review.body %>
+                <p class="card-text fs-6"> <%= review.body %>
                 </p>
                 <% if(currentUser && review.author.equals(currentUser._id)) { %>
                   <form action="/laimesti/<%= winning._id %>/reviews/<%= review._id %>?_method=DELETE"
