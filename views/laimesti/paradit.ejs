@@ -54,24 +54,17 @@
             </div>
       </div>
     </div>
-
-<<<<<<< HEAD
-    <% if(currentUser) { %>
-      <form action="/laimesti/<%= winning._id %>/atsauksmes/" method="POST" class="mb-3 validated-form" novalidate>
-        <div class="mb-3">
-          <label class="form-label" for="body">Komentāri</label>
-          <textarea class="form-control" name="review[body]" id="body" cols="30" rows="3" required></textarea>
-          <div class="valid-feedback">
-            Looks good!
-=======
-    
+ 
       <% if(currentUser) { %>
         <h4>Atstāj komentāru par laimestu</h4>
         <form action="/laimesti/<%= winning._id %>/atsauksmes/" method="POST" class="mb-3 validated-form" novalidate>
-          <!-- <div class="mb-3">
-                <label class="form-label" for="rating">Rating</label>
-                <input class="form-range" type="range" min="1" max="5" name="review[rating]" id="rating">
-            </div> -->
+          <div class="mb-3">
+            <label class="form-label" for="body">Komentāri</label>
+            <textarea class="form-control" name="review[body]" id="body" cols="30" rows="3" required></textarea>
+            <div class="valid-feedback">
+              Looks good!
+
+              
           <div class="mb-3">
             <fieldset class="starability-basic">
               <input type="radio" id="no-rate" class="input-no-rate" name="review[rating]" value="1" checked
@@ -87,33 +80,18 @@
               <input type="radio" id="first-rate5" name="review[rating]" value="5" />
               <label for="first-rate5" title="Amazing">5 zvaigznes</label>
             </fieldset>
->>>>>>> reviews
           </div>
-        </div>
-        <button class="btn btn-success">Iesniegt</button>
-      </form>
-      <% } %>
-        <% for(let review of winning.reviews) { %>
-          <div class="card mb-3">
-            <div class="card-body">
-              <h5 class="card-title">
-                <%= review.author.username %>
-              </h5>
-              <p class="card-text">Vērtējums: <%= review.body %>
-              </p>
-              <% if(currentUser && review.author.equals(currentUser._id)) { %>
-                <form action="/laimesti/<%= winning._id %>/reviews/<%= review._id %>?_method=DELETE"
-                  method="POST">
-                  <button class="btn btn-sm btn-danger">Izdzēst</button>
-                </form>
-                <% } %>
-            </div>
-          </div>
+
           <% } %>
   </div>
 </div>
-    
-      <!-- <% if(currentUser) { %>
+<button class="btn btn-success">Iesniegt</button>
+</form>
+
+
+<!--     
+      <% if(currentUser) { %>
+        <h4>Atstāj komentāru par laimestu</h4>
         <form action="/laimesti/<%= winning._id %>/atsauksmes/" method="POST" class="mb-3 validated-form" novalidate>
           <div class="mb-3">
             <label class="form-label" for="body">Komentāri</label>
@@ -124,7 +102,8 @@
           </div>
           <button class="btn btn-success">Iesniegt</button>
         </form>
-        <% } %>
+        <% } %> -->
+
           <% for(let review of winning.reviews) { %>
             <div class="card mb-3">
               <div class="card-body">
@@ -147,7 +126,7 @@
             </div>
             <% } %>
     </div>
-  </div> -->
+  </div>
 
   <a href="/laimesti">Visi laimesti</a>
 
