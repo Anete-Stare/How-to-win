@@ -1,5 +1,4 @@
 <% layout('layouts/boilerplate') %>
-  <!-- <link rel="stylesheet" href="/stylesheets/stars.css"> -->
   <link rel="stylesheet" href="/stylesheets/laimesti.css">
 
   <main class="my-auto" id="pievienotsLaimests">
@@ -58,14 +57,8 @@
       <% if(currentUser) { %>
         <h4>Atstāj komentāru par laimestu</h4>
         <form action="/laimesti/<%= winning._id %>/atsauksmes/" method="POST" class="mb-3 validated-form" novalidate>
-          <div class="mb-3">
-            <label class="form-label" for="body">Komentāri</label>
-            <textarea class="form-control" name="review[body]" id="body" cols="30" rows="3" required></textarea>
-            <div class="valid-feedback">
-              Looks good!
 
-              
-          <div class="mb-3">
+          <!-- <div class="mb-3">
             <fieldset class="starability-basic">
               <input type="radio" id="no-rate" class="input-no-rate" name="review[rating]" value="1" checked
                 aria-label="No rating." />
@@ -80,19 +73,8 @@
               <input type="radio" id="first-rate5" name="review[rating]" value="5" />
               <label for="first-rate5" title="Amazing">5 zvaigznes</label>
             </fieldset>
-          </div>
+          </div> -->
 
-          <% } %>
-  </div>
-</div>
-<button class="btn btn-success">Iesniegt</button>
-</form>
-
-
-<!--     
-      <% if(currentUser) { %>
-        <h4>Atstāj komentāru par laimestu</h4>
-        <form action="/laimesti/<%= winning._id %>/atsauksmes/" method="POST" class="mb-3 validated-form" novalidate>
           <div class="mb-3">
             <label class="form-label" for="body">Komentāri</label>
             <textarea class="form-control" name="review[body]" id="body" cols="30" rows="3" required></textarea>
@@ -101,8 +83,8 @@
             </div>
           </div>
           <button class="btn btn-success">Iesniegt</button>
-        </form>
-        <% } %> -->
+          </form>
+          <% } %>
 
           <% for(let review of winning.reviews) { %>
             <div class="card mb-3">
