@@ -38,7 +38,7 @@
           </p>
         </div>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item">Iesniedza <%= winning.author.username %>
+          <li class="list-group-item">Iesniedza: <%= winning.author.username %>
           </li>
         </ul>
         <% if(currentUser && winning.author.equals(currentUser._id)) { %>
@@ -57,7 +57,7 @@
 
     
       <% if(currentUser) { %>
-        <h2>Atstāj atsauksmi</h2>
+        <h4>Atstāj komentāru par laimestu</h4>
         <form action="/laimesti/<%= winning._id %>/atsauksmes/" method="POST" class="mb-3 validated-form" novalidate>
           <!-- <div class="mb-3">
                 <label class="form-label" for="rating">Rating</label>
