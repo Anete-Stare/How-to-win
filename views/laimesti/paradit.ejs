@@ -80,11 +80,9 @@
           <% } %>
 
 
-      
-
-
-
+<% if(winning.reviews.length){ %> 
           <h4 class="fs-4">Komentāri</h4>
+          <% } %> 
           <% for(let review of winning.reviews) { %>
             <div class="card mb-3">
               <div class="card-body">
@@ -104,8 +102,7 @@
               </div>
 
             </div>
-
-            <% } %>
+                    <% } %>
 
     </div>
 
