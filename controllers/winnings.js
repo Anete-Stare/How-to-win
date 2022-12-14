@@ -21,6 +21,7 @@ module.exports.createWinning = async (req,res,next) => {
     res.redirect(`/laimesti/${winning._id}`)
 }
 
+
 module.exports.showWinning = async (req, res) => {
     const winning = await Winning.findById(req.params.id).populate({
         path: 'reviews',

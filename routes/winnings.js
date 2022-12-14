@@ -11,7 +11,7 @@ const Winning = require('../models/winning');
 
 router.route('/')
     .get(catchAsync(winnings.index))
-    .post(isLoggedIn, upload.array('image'),validateWinning, catchAsync (winnings.createWinning))
+    .post(isLoggedIn, validateWinning, upload.array('image'),catchAsync (winnings.createWinning))
 
 
 router.get('/jauns',isLoggedIn, winnings.renderNewForm)

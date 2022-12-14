@@ -1,5 +1,8 @@
 const cloudinary = require('cloudinary').v2;
 const {CloudinaryStorage} = require('multer-storage-cloudinary');
+const multer = require('multer');
+
+
 
 cloudinary.config({
     cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
@@ -15,8 +18,9 @@ const storage = new CloudinaryStorage({
         transformation: [
             {width:400, height:300,gravity: "auto", crop: "fill"},
         ],
-        format: 'jpg'
-    }
+        format: 'jpg',
+        limits: {fileSize: 1048576},
+    },
 });
 
 
