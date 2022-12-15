@@ -3,10 +3,6 @@ p{
     font-weight: 500;
 }
 
-/* #about{
-    padding: 140px 50px 0px 50px;
-    margin: 0px 0px;
-} */
 
 @media(max-width: 600px) {
     p{
@@ -22,7 +18,6 @@ p{
         padding: 140px 20px 0px 20px;  
     }
 }
-
 
 
 h1{

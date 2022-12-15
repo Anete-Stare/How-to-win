@@ -3,7 +3,6 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-
 main{
     padding: 100px 50px 0px 50px;
     margin: 0px 0px;
@@ -36,14 +35,6 @@ section{
     font-weight: bold;
 }
 
-/* .nav-link{
-    color:#06114F;
-    background-color: #f4ffb2;
-} */
-
-/* #mainNavbar{
-    background-color: #f4ffb2;
-} */
 
 .scrolled {
     background-color: #A782EC;
@@ -51,15 +42,6 @@ section{
     color: white !important;
 }
 
-
-/* .scrolled li a {
-    color: white;
-  } */
-
-
-/* #mainView .container{
-    margin: 25px 50px 25px 50px;
-} */
 
 @media (max-width: 1399px) {
     #mainNavbar .navbar-toggler {
@@ -80,11 +62,6 @@ section{
     color: rgb(6,17,79);
     border-color: #06114F;
 }
-
-/* #mainNavbar .navbar-toggler{
-    color: #06114F;   
-} */
-
 
 #footerDiv{
     margin: 0px 0px;
