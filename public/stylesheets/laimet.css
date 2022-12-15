@@ -38,3 +38,8 @@ h1{
 #imageAnete{
     border-radius: 15px 100px 15px 100px;
 }
+
+a{
+    color:#06114F;
+    font-weight: bold;
+  }
