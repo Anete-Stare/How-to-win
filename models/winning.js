@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const Atsauksme = require('./review');
+const Review = require('./review');
 const Schema = mongoose.Schema;
 
 const ImageSchema = new Schema({
