@@ -1,0 +1,28 @@
+#registreties{
+    padding: 140px 50px 0px 50px;
+    margin: 0px 0px;
+}
+
+h1 {
+    color: #A782EC;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+form{
+    font-weight: bold;
+}
+
+.btn{
+    border-color:  #A782EC;
+    background-color: #A782EC;
+    color: white;
+    font-weight:bold;
+}
+
+.btn:hover{
+    border-color:  #A782EC;
+    background-color: #A782EC;
+    color: white;
+    font-weight:bold;
+}
