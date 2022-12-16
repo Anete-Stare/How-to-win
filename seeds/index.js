@@ -15,7 +15,6 @@ db.once("open", () => {
 
 const sample = array => array[Math.floor(Math.random()*array.length)];
 
-
 const seedDB = async ()=> {
     await Winning.deleteMany({});
     for(let i = 0; i<50; i++) {

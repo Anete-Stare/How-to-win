@@ -1,62 +1,63 @@
-<% layout('layouts/boilerplate') %> 
-<link rel="stylesheet" href="/stylesheets/laimesti.css">
+<% layout('layouts/boilerplate') %>
+    <link rel="stylesheet" href="/stylesheets/laimesti.css">
 
-<section class="container">
-<div class="row mt-0">
-    <h1 class="text-center">Jauns laimests</h1>
-    <p class="fs-4"> 
-        Dalīts prieks ir <b>dubultprieks</b> ! Iedvesmo citus piedalīties Instagram konkursos, <b>parādot savu laimestu</b>. Pastāsti, ja, saņemot balvu, esi piedzīvojis <b>kuriozu mirkli</b>, vai vienkārši <b>pasakies konkursa organizētājiem</b> par foršo laimestu. Tāpat vari komentēt arī citu iegūtos laimestus.
-        </p>
-        <p class="fs-5 text-center" id="formHeading">Pievieno savu laimestu, aizpildot formu:</p>
-    <div class="col-md-6 offset-md-3">
-        <div class="card shadow">
-            <div class="card-body">
-        <form action="/laimesti" method="POST" novalidate class="validated-form" enctype="multipart/form-data">
-            <div class="mb-3">
-                <label class="form-label" for="title">Laimētais produkts</label>
-                <input class="form-control" type="text" id="title" name="winning[title]" required>
-                <div class="valid-feedback">
-                    Nosaukums pievienots!
-                </div>
-            </div>
+    <section class="container">
+        <div class="row mt-0">
+            <h1 class="text-center">Jauns laimests</h1>
+            <p class="fs-4">
+                Dalīts prieks ir <b>dubultprieks</b> ! Iedvesmo citus piedalīties Instagram konkursos, <b>parādot savu
+                    laimestu</b>. Pastāsti, ja, saņemot balvu, esi piedzīvojis <b>kuriozu mirkli</b>, vai vienkārši
+                <b>pasakies konkursa organizētājiem</b> par foršo laimestu. Tāpat vari komentēt arī citu iegūtos
+                laimestus.
+            </p>
+            <p class="fs-5 text-center" id="formHeading">Pievieno savu laimestu, aizpildot formu:</p>
+            <div class="col-md-6 offset-md-3">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <form action="/laimesti" method="POST" novalidate class="validated-form"
+                            enctype="multipart/form-data">
+                            <div class="mb-3">
+                                <label class="form-label" for="title">Laimētais produkts</label>
+                                <input class="form-control" type="text" id="title" name="winning[title]" required>
+                                <div class="valid-feedback">
+                                    Nosaukums pievienots!
+                                </div>
+                            </div>
 
-            <div class="mb-3">
-                <label class="form-label" for="brand">Uzņēmums/Zīmols</label>
-                <input class="form-control" type="text" id="brand" name="winning[brand]" required>
-                <div class="valid-feedback">
-                    Uzņēmums/Zīmols pievienots!
-                </div>
-            </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="brand">Uzņēmums/Zīmols</label>
+                                <input class="form-control" type="text" id="brand" name="winning[brand]" required>
+                                <div class="valid-feedback">
+                                    Uzņēmums/Zīmols pievienots!
+                                </div>
+                            </div>
 
-            <div class="mb-3">
-                <label class="form-label" for="description">Apraksts</label>
-                <textarea class="form-control" type="text" id="description" name="winning[description]" required></textarea>
-                <div class="valid-feedback">
-                    Apraksts pievienots!
+                            <div class="mb-3">
+                                <label class="form-label" for="description">Apraksts</label>
+                                <textarea class="form-control" type="text" id="description" name="winning[description]"
+                                    required></textarea>
+                                <div class="valid-feedback">
+                                    Apraksts pievienots!
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="">Pievienot bildes (maksimums 3 bildes, 1 bildes izmērs līdz 2MB)</label>
+                                <input class="form-control" type="file" id="image" name="image" multiple required>
+                                <div class="valid-feedback">
+                                    Bildes pievienotas!
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="d-grid">
+                                    <button class="btn btn-success">Pievienot laimestu</button>
+                                </div>
+                            </div>
+                        </form>
+                        <a href="/laimesti">Visi laimesti</a>
+                    </div>
                 </div>
-            </div>
-            <div class="mb-3">
-                <label for="">Pievienot bildes (1 bildes izmērs līdz 2MB)</label>
-                <input class="form-control" type="file" id="image" name="image" multiple required>
-                <div class="valid-feedback">
-                    Bildes pievienotas!
-                </div>
-              </div>
-            <div class="mb-3">
-                <div class="d-grid">
-                    <button class="btn btn-success">Pievienot laimestu</button>
-                </div>
-            </div>
-        </form>
-        <a href="/laimesti">Visi laimesti</a>
             </div>
         </div>
-    </div>
-</div>
 
 
     </section>
-
-
-
-

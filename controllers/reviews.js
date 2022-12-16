@@ -8,7 +8,7 @@ module.exports.createReview = async(req,res) =>{
     winning.reviews.push(review);
     await review.save();
     await winning.save();
-    req.flash('success','Atsauksme pievienota!' );
+    req.flash('success','Komentārs pievienots!' );
     res.redirect(`/laimesti/${winning._id}`);
 }
 
@@ -16,7 +16,7 @@ module.exports.deleteReview = async(req,res) =>{
     const {id, reviewId} = req.params;
     await Review.findByIdAndUpdate(id, {$pull: {reviews: reviewId} });
     await Review.findByIdAndDelete(reviewId);
-    req.flash('success', 'Atsauksme izdzēsta!')
+    req.flash('success', 'Komentārs izdzēsts!')
     res.redirect(`/laimesti/${id}`);
 }
 

@@ -24,7 +24,6 @@ const extension = (joi) => ({
 
 const Joi = BaseJoi.extend(extension);
 
-
 module.exports.winningSchema = Joi.object({
     winning: Joi.object({
         title: Joi.string().required().escapeHTML(),
@@ -33,9 +32,6 @@ module.exports.winningSchema = Joi.object({
     }).required(),
     deleteImages: Joi.array()
 });
-
-
-
 
 module.exports.reviewSchema = Joi.object({
     review: Joi.object({

@@ -1,11 +1,9 @@
-if(process.env.NODE_ENV !== 'production') {
+if (process.env.NODE_ENV !== 'production') {
     require('dotenv').config();
 }
 
-// console.log(process.env.CLOUDINARY_CLOUD_NAME) // this value is from .env, but can delete from here
-
 const express = require('express');
-const path = require ('path');
+const path = require('path');
 const mongoose = require('mongoose');
 const ejsMate = require('ejs-mate');
 const session = require('express-session');
@@ -16,15 +14,10 @@ const passport = require('passport');
 const LocalStrategy = require('passport-local');
 const User = require('./models/user');
 const helmet = require('helmet');
-
 const mongoSanitize = require('express-mongo-sanitize');
-
 const userRoutes = require('./routes/users');
 const winningRoutes = require('./routes/winnings');
 const reviewRoutes = require('./routes/reviews');
-
-
-
 const MongoDBStore = require('connect-mongo');
 
 
@@ -41,14 +34,13 @@ db.once("open", () => {
     console.log("Database connected");
 });
 
-
 const app = express();
 
-app.engine('ejs', ejsMate );
+app.engine('ejs', ejsMate);
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
-app.use(express.urlencoded({extended: true}));
+app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(mongoSanitize());
@@ -59,17 +51,16 @@ const secret = 'thisshouldbeabettersecret!'; //process.env.SECRET  - this for pr
 //this below in the production phase
 const store = MongoDBStore.create({
     mongoUrl: dbUrl,
-    touchAfter: 24*60*60,
+    touchAfter: 24 * 60 * 60,
     crypto: {
         secret
     }
 });
 
 //this below in the production phase
-store.on('error', function(e){
+store.on('error', function (e) {
     console.log('SESSION STORE ERROR', e)
 })
-
 
 const sessionConfig = {
     store,
@@ -79,8 +70,8 @@ const sessionConfig = {
     saveUninitialized: true,
     cookie: {
         httpOnly: true,   //when production, needs to have below -  secure: true? 
-        expires: Date.now()+ 1000*60*60*24*7,
-        maxAge: 1000*60*60*24*7
+        expires: Date.now() + 1000 * 60 * 60 * 24 * 7,
+        maxAge: 1000 * 60 * 60 * 24 * 7
     }
 }
 app.use(session(sessionConfig))
@@ -147,7 +138,7 @@ passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
-app.use((req,res,next) =>{
+app.use((req, res, next) => {
     console.log(req.query);
     res.locals.currentUser = req.user;
     res.locals.success = req.flash('success');
@@ -155,17 +146,15 @@ app.use((req,res,next) =>{
     next();
 })
 
-
 app.use('/', userRoutes)
 app.use('/laimesti', winningRoutes)
 app.use('/laimesti/:id/atsauksmes', reviewRoutes)
 
-
-app.get('/programma', (req,res) =>{
+app.get('/programma', (req, res) => {
     res.render('programma')
 })
 
-app.get('/:par-:ka-:laimet', (req,res) =>{
+app.get('/:par-:ka-:laimet', (req, res) => {
     res.render('laimet')
 })
 
@@ -173,22 +162,18 @@ app.get('/', (req, res) => {
     res.render('home');
 });
 
-
-
-
-
 //Error handler for wrong urls, this below will only run if nothing else has matched first above. 
-app.all('*', (req,res,next) => {
+app.all('*', (req, res, next) => {
     next(new ExpressError('Lapa netika atrasta', 404))
 })
 
 //here below we set our error handler
-app.use((err,req,res,next) => {
-    const {statusCode = 500} = err;
-    if(!err.message) err.message = 'Kaut kas nogāja greizi!'
-    res.status(statusCode).render('error', {err})
+app.use((err, req, res, next) => {
+    const { statusCode = 500 } = err;
+    if (!err.message) err.message = 'Kaut kas nogāja greizi!'
+    res.status(statusCode).render('error', { err })
 })
 
-app.listen(3000, ()=> {
+app.listen(3000, () => {
     console.log('Serving on port 3000')
 }) 

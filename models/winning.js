@@ -15,7 +15,6 @@ ImageSchema.virtual('cardImage').get(function(){
     return this.url.replace('/upload', '/upload/ar_4:3,c_crop');
 });
 
-
 const WinningSchema = new Schema ({
     title: String,
     brand: String,
@@ -33,7 +32,6 @@ const WinningSchema = new Schema ({
     ]
 });
 
-
 // below the way to delete winning with its reviews
 WinningSchema.post('findOneAndDelete', async function(doc){
     if(doc){
@@ -44,6 +42,5 @@ WinningSchema.post('findOneAndDelete', async function(doc){
         })
     }
 })
-
 
 module.exports = mongoose.model('Winning', WinningSchema);

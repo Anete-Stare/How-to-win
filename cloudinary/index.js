@@ -1,8 +1,6 @@
 const cloudinary = require('cloudinary').v2;
-const {CloudinaryStorage} = require('multer-storage-cloudinary');
+const { CloudinaryStorage } = require('multer-storage-cloudinary');
 const multer = require('multer');
-
-
 
 cloudinary.config({
     cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
@@ -16,14 +14,12 @@ const storage = new CloudinaryStorage({
         folder: 'KaLaimet',
         allowedFormats: ['jpeg', 'png', 'jpg', 'heic'],
         transformation: [
-            {width:400, height:300,gravity: "auto", crop: "fill"},
+            { width: 400, height: 300, gravity: "auto", crop: "fill" },
         ],
         format: 'jpg',
-        limits: {fileSize: 1048576},
+        limits: { fileSize: 1048576 },
     },
 });
-
-
 
 module.exports = {
     cloudinary,

@@ -3,7 +3,6 @@ const ExpressError = require('./utils/ExpressError');
 const Winning = require('./models/winning');
 const Review = require('./models/review');
 
-
 module.exports.isLoggedIn = (req,res,next) => {
     if(!req.isAuthenticated()){
         req.session.returnTo = req.originalUrl
@@ -12,7 +11,6 @@ module.exports.isLoggedIn = (req,res,next) => {
     }
     next();
 }
-
 
 module.exports.validateWinning = (req,res,next) => {
     const {error} = winningSchema.validate(req.body);

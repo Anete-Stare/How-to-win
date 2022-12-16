@@ -7,11 +7,9 @@ const reviews = require('../controllers/reviews');
 const ExpressError = require('../utils/ExpressError');
 const catchAsync = require('../utils/catchAsync');
 
-
 router.post('/', isLoggedIn, validateReview, catchAsync(reviews.createReview))
 
 //this one below for deleting specific review, look for $pull in Docs
 router.delete('/:atsauksmeId', isLoggedIn, isReviewAuthor, catchAsync(reviews.deleteReview))
-
 
 module.exports = router;
