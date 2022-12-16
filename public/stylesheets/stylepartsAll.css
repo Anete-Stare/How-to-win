@@ -4,12 +4,22 @@
 }
 
 main{
-    padding: 100px 50px 0px 50px;
+    padding: 120px 50px 0px 50px;
     margin: 0px 0px;
 }
 
+@media (max-width: 420px) {
+    main {
+    padding: 140px 20px 0px 20px;  
+    }
+
+}
+
+
+
+
 section{
-    padding: 40px 50px 0px 50px;
+    padding: 30px 50px 0px 50px;
     margin: 0px 0px;
 }
 
@@ -81,9 +91,11 @@ section{
 }
 
 .container-fluid{
-    padding: 0px 0px 0px 14px; 
+    padding: 0px 0px 0px 0px; 
 }
 
-
-
+.alert{
+    margin-bottom: 0px;
+    padding: 10px 16px;
+}
 
