@@ -15,7 +15,7 @@
                 <div class="card shadow">
                     <div class="card-body">
                         <form action="/laimesti" method="POST" novalidate class="validated-form"
-                            enctype="multipart/form-data">
+                            enctype="multipart/form-data" id="winningCreateForm">
                             <div class="mb-3">
                                 <label class="form-label" for="title">Laimētais produkts</label>
                                 <input class="form-control" type="text" id="title" name="winning[title]" required>
@@ -42,14 +42,14 @@
                             </div>
                             <div class="mb-3">
                                 <label for="">Pievienot bildes (maksimums 3 bildes, 1 bildes izmērs līdz 2MB)</label>
-                                <input class="form-control" type="file" id="image" name="image" multiple required>
+                                <input class="form-control firstImageUpload" type="file" id="image" name="image" multiple required>
                                 <div class="valid-feedback">
                                     Bildes pievienotas!
                                 </div>
                             </div>
                             <div class="mb-3">
                                 <div class="d-grid">
-                                    <button class="btn btn-success">Pievienot laimestu</button>
+                                    <button class="btn btn-success" id="submitButton">Pievienot laimestu</button>
                                 </div>
                             </div>
                         </form>
@@ -58,6 +58,25 @@
                 </div>
             </div>
         </div>
-
-
     </section>
+
+    <script>
+        $(function(){
+        var maxImageNumber = 3;
+        $winningCreateForm =$('#winningCreateForm'),
+        $firstUpload = $('#image'),
+        $submitButton = $('#submitButton');
+        $submitButton.prop('disabled', 'disabled');
+
+        $firstUpload.on('change',function(){
+            var numberOfImages = $(this)[0].files.length;
+            if(numberOfImages>maxImageNumber){
+                alert("Vienam laimesta var pievienot maksimums 3 bildes. Lūdzu, samaziniet bilžu skaitu.");
+                $(this).val('');
+                $submitButton.prop('disabled', 'disabled');
+            } else{
+                $submitButton.prop('disabled', false);
+            }
+        });
+    });
+    </script>

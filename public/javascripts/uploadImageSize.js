@@ -1,3 +1,5 @@
+const e = require("connect-flash");
+
 const uploadField = document.getElementById("image");  
 
 uploadField.onchange = function() {
@@ -6,3 +8,5 @@ uploadField.onchange = function() {
        this.value = "";
     };
 };
+
+
