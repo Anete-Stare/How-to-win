@@ -16,36 +16,29 @@
                     <div class="card-body">
                         <form action="/laimesti" method="POST" novalidate class="validated-form"
                             enctype="multipart/form-data" id="winningCreateForm">
+
+                            
+                            <div class="mb-3"> Obligāti aizpildāmie lauki *
+                            </div>
+
                             <div class="mb-3">
-                                <label class="form-label" for="title">Laimētais produkts</label>
+                                <label class="form-label" for="title">Laimētais produkts *</label>
                                 <input class="form-control" type="text" id="title" name="winning[title]" required>
-                                <div class="valid-feedback">
-                                    Nosaukums pievienots!
-                                </div>
                             </div>
 
                             <div class="mb-3">
-                                <label class="form-label" for="brand">Uzņēmums/Zīmols</label>
+                                <label class="form-label" for="brand">Uzņēmums/Zīmols *</label>
                                 <input class="form-control" type="text" id="brand" name="winning[brand]" required>
-                                <div class="valid-feedback">
-                                    Uzņēmums/Zīmols pievienots!
-                                </div>
                             </div>
 
                             <div class="mb-3">
-                                <label class="form-label" for="description">Apraksts</label>
+                                <label class="form-label" for="description">Apraksts *</label>
                                 <textarea class="form-control" type="text" id="description" name="winning[description]"
                                     required></textarea>
-                                <div class="valid-feedback">
-                                    Apraksts pievienots!
-                                </div>
                             </div>
                             <div class="mb-3">
-                                <label for="">Pievienot bildes (maksimums 3 bildes, 1 bildes izmērs līdz 2MB)</label>
+                                <label for="">Pievienot bildes (maksimums 3 bildes, 1 bildes izmērs līdz 2MB) *</label>
                                 <input class="form-control firstImageUpload" type="file" id="image" name="image" multiple required>
-                                <div class="valid-feedback">
-                                    Bildes pievienotas!
-                                </div>
                             </div>
                             <div class="mb-3">
                                 <div class="d-grid">
