@@ -71,7 +71,7 @@
         $firstUpload.on('change',function(){
             var numberOfImages = $(this)[0].files.length;
             if(numberOfImages>maxImageNumber){
-                alert("Vienam laimesta var pievienot maksimums 3 bildes. Lūdzu, samaziniet bilžu skaitu.");
+                alert("Vienam laimestam var pievienot maksimums 3 bildes. Lūdzu, samaziniet bilžu skaitu.");
                 $(this).val('');
                 $submitButton.prop('disabled', 'disabled');
             } else{

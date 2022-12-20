@@ -47,7 +47,7 @@
 
                     </div>
                     <div class="mb-3">
-                        <button class="btn btn-info">Atjaunināt laimestu</button>
+                        <button class="btn btn-info" id="secondSubmitButton">Atjaunināt laimestu</button>
                     </div>
                 </form>
                 <a href="/laimesti/<%= winning._id %> ">Atpakaļ uz laimestu</a>
@@ -55,3 +55,27 @@
         </div>
 
     </section>
+
+    <script>
+        $(function(){
+        var maxImageNumber = 3;
+        $winningEditForm =$('#winningEditForm'),
+        $editUpload = $('#image'),
+        $existingImages = $('.form-check-inline').length;
+        $imgDeletions = $('.form-check-inline:checked').length;
+        $secondSubmitButton = $('#secondSubmitButton');
+
+        $editUpload.on('change',function(){
+            var addedImages = $(this)[0].files.length;
+            var newTotal = $existingImages-$imgDeletions+addedImages;
+            if(newTotal>maxImageNumber){
+                alert("Vienam laimestam var pievienot maksimums 3 bildes. Lūdzu, samaziniet bilžu skaitu.");
+                $(this).val('');
+                $submitButton.prop('disabled', 'disabled');
+            } else{
+                $submitButton.prop('disabled', false);
+            }
+        });
+    });
+
+    </script>
