@@ -6,10 +6,14 @@
         <div class="row">
             <h1 class="text-center">Labot laimestu</h1>
             <div class="col-md-6 offset-md-3">
+                <div class="card shadow">
+                    <div class="card-body">
                 <form action="/laimesti/<%= winning._id %>?_method=PUT" method="POST" novalidate class="validated-form"
                     enctype="multipart/form-data" id="winningEditForm">
+                    <div class="mb-3"> Obligāti aizpildāmie lauki *
+                    </div>
                     <div class="mb-3">
-                        <label class="form-label" for="title">Laimētais produkts</label>
+                        <label class="form-label" for="title">Laimētais produkts *</label>
                         <input class="form-control" type="text" id="title" name="winning[title]"
                             value="<%= winning.title %> " required>
                     </div>
@@ -18,7 +22,7 @@
                     </div>
 
                     <div class="mb-3">
-                        <label class="form-label" for="title">Uzņēmums/Zīmols</label>
+                        <label class="form-label" for="title">Uzņēmums/Zīmols *</label>
                         <input class="form-control" type="text" id="title" name="winning[brand]"
                             value="<%= winning.brand %> " required>
                     </div>
@@ -27,12 +31,12 @@
                     </div>
 
                     <div class="mb-3">
-                        <label class="form-label" for="description">Apraksts</label>
+                        <label class="form-label" for="description">Apraksts *</label>
                         <textarea class="form-control" type="text" id="description" name="winning[description]"
                             required><%= winning.description %> </textarea>
                     </div>
                     <div class="mb-3">
-                        <label for="">Pievienot vairāk bildes (1 bildes izmērs līdz 2MB)</label>
+                        <label for="">Pievienot vairāk bildes (Kopējais bilžu skaits līdz 3 bildēm, 1 bildes izmērs līdz 2MB) *</label>
                         <input class="form-control imageUpload" type="file" id="image" name="image" multiple>
                     </div>
                     <div class="mb-3">
@@ -47,12 +51,16 @@
 
                     </div>
                     <div class="mb-3">
+                        <div class="d-grid">
                         <button class="btn btn-info" id="secondSubmitButton">Atjaunināt laimestu</button>
+                    </div>
                     </div>
                 </form>
                 <a href="/laimesti/<%= winning._id %> ">Atpakaļ uz laimestu</a>
             </div>
         </div>
+    </div>
+</div>
 
     </section>
 
