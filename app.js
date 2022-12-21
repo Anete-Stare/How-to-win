@@ -21,7 +21,7 @@ const reviewRoutes = require('./routes/reviews');
 const MongoDBStore = require('connect-mongo');
 
 
-const dbUrl = 'mongodb://localhost:27017/konkursi'; // process.env.DB_URL; - this for production cloud database Atlas
+const dbUrl = process.env.DB_URL; //'mongodb://localhost:27017/konkursi';  - this for development cloud database Atlas
 
 mongoose.connect(dbUrl, {
     useNewUrlParser: true,
