@@ -6,7 +6,7 @@ const Review = require('./models/review');
 module.exports.isLoggedIn = (req,res,next) => {
     if(!req.isAuthenticated()){
         req.session.returnTo = req.originalUrl
-        req.flash('error', 'Lūdzu, pierakstieties lapā!');
+        req.flash('error', 'Lūdzu, pieraksties lapā!');
         return res.redirect('/pierakstities');
     }
     next();
@@ -26,7 +26,7 @@ module.exports.isAuthor = async(req,res,next) => {
     const {id} = req.params;
     const winning = await Winning.findById(id);
     if(!winning.author.equals(req.user._id)){
-        req.flash('error', 'Jums nav atļauja veikt šo soli!')
+        req.flash('error', 'Tev nav atļaujas veikt šo soli!')
         return res.redirect(`/laimesti/${id}`);
     }
     next();
@@ -36,7 +36,7 @@ module.exports.isReviewAuthor = async(req,res,next) => {
     const {id, reviewId} = req.params;
     const review = await Review.findById(reviewId);
     if(!review.author.equals(req.user._id)){
-        req.flash('error', 'Jums nav atļauja veikt šo soli!')
+        req.flash('error', 'Tev nav atļaujas veikt šo soli!')
         return res.redirect(`/laimesti/${id}`);
     }
     next();

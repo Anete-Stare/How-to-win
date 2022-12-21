@@ -25,7 +25,7 @@ module.exports.renderLogin = (req,res) => {
 }
 
 module.exports.login =  (req,res) => {
-    req.flash('success', 'Prieks Jūs atkal redzēt!');
+    req.flash('success', 'Prieks Tevi atkal redzēt!');
     const redirectUrl = req.session.returnTo || '/laimesti';
     delete req.session.returnTo;
     res.redirect(redirectUrl);
