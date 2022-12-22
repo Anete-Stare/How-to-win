@@ -20,8 +20,11 @@ const winningRoutes = require('./routes/winnings');
 const reviewRoutes = require('./routes/reviews');
 const MongoDBStore = require('connect-mongo');
 
+mongoose.set('strictQuery', false); // this added after trying to deploy, maybe need to put in other place!!!!!
 
 const dbUrl = process.env.DB_URL; //'mongodb://localhost:27017/konkursi';  - this for development cloud database Atlas
+
+
 
 mongoose.connect(dbUrl, {
     useNewUrlParser: true,
