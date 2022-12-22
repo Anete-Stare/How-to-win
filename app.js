@@ -46,7 +46,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(mongoSanitize());
 app.use(express.static('public')); // added middleware for adding static images from imgs folder in publis!!!
 
-const secret = 'thisshouldbeabettersecret!'; //process.env.SECRET  - this for production
+const secret = process.env.SECRET || 'thisshouldbeabettersecret!'; // process.env.SECRET;  - this for production ; 'thisshouldbeabettersecret!' - this for development;
 
 //this below in the production phase
 const store = MongoDBStore.create({
