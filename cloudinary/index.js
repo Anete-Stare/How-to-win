@@ -17,7 +17,7 @@ const storage = new CloudinaryStorage({
             { width: 400, height: 300, gravity: "auto", crop: "fill" },
         ],
         format: 'jpg',
-        limits: { fileSize: 1048576 },
+        // limits: { fileSize: 1048576 },
     },
 });
 

@@ -36,7 +36,7 @@
                             required><%= winning.description %> </textarea>
                     </div>
                     <div class="mb-3">
-                        <label for="">Pievienot vairāk bildes (Kopējais bilžu skaits līdz 3 bildēm, 1 bildes izmērs līdz 2MB) *</label>
+                        <label for="">Pievienot vairāk bildes (Kopējais bilžu skaits līdz 3 bildēm) *</label>
                         <input class="form-control imageUpload" type="file" id="image" name="image" multiple>
                     </div>
                     <div class="mb-3">
@@ -77,7 +77,7 @@
             var addedImages = $(this)[0].files.length;
             var newTotal = $existingImages-$imgDeletions+addedImages;
             if(newTotal>maxImageNumber){
-                alert("Vienam laimestam var pievienot maksimums 3 bildes. Lūdzu, samaziniet bilžu skaitu.");
+                alert("Vienam laimestam var pievienot maksimums 3 bildes. Lūdzu, samazini bilžu skaitu.");
                 $(this).val('');
                 $submitButton.prop('disabled', 'disabled');
             } else{
