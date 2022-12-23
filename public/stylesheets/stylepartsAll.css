@@ -9,18 +9,19 @@ main{
 }
 
 
+
 @media (max-width: 420px) {
     main {
     padding: 140px 20px 0px 20px;  
     }
 }
 
-
-
 section{
-    padding: 30px 50px 0px 50px;
+    padding: 20px 50px 0px 50px;
     margin: 0px 0px;
 }
+
+
 
 
 .navbar{
@@ -78,6 +79,8 @@ section{
     border: none;
     outline: none;
     box-shadow: none;
+    padding-top: 0px;
+    padding-bottom: 0px;
     /* border-color: rgb(6,17,79); */
 }
 
@@ -106,6 +109,6 @@ section{
 
 .alert{
     margin-bottom: 0px;
-    padding: 10px 16px;
+    padding: 20px 16px;
 }
 
