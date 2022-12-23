@@ -13,6 +13,10 @@ h3{
     #programma {
         padding: 120px 20px 0px 20px;  
     }
+    #audio1, #audio2, #audio3, #audio4, #audio5, #audio6,#audio7{
+        padding-left: 5px;
+    }
+
 }
 @media (max-width: 420px) {
     #programma {
