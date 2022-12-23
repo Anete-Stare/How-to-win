@@ -2,6 +2,8 @@ const mongoose = require('mongoose');
 const Review = require('./review');
 const Schema = mongoose.Schema;
 
+mongoose.set('strictQuery', false);
+
 const ImageSchema = new Schema({
     url: String,
     filename: String

@@ -60,27 +60,22 @@
         <div class="col-md-6 offset-md-3">
           <% if(currentUser) { %>
             <h4 class="fs-4">Atstāj komentāru par laimestu</h4>
-            <form action="/laimesti/<%= winning._id %>/atsauksmes/" method="POST" class="mb-3 validated-form"
+            <form action="/laimesti/<%= winning._id %>/atsauksmes" method="POST" class="mb-3 validated-form"
               novalidate>
 
-              <div class="mb-3">
+              <!-- <div class="mb-3">
                 <fieldset class="starability-basic">
                   <input type="radio" id="no-rate" class="input-no-rate" name="review[rating]" value="1" checked
                     aria-label="No rating." />
                 </fieldset>
-              </div>
+              </div> -->
 
               <div class="mb-3">
                 <textarea class="form-control" name="review[body]" id="body" cols="30" rows="3" required></textarea>
-                <div class="valid-feedback">
-                  Looks good!
-                </div>
               </div>
               <button class="btn btn-success">Iesniegt</button>
             </form>
             <% } %>
-
-
               <% if(winning.reviews.length){ %>
                 <h4 class="fs-4">Komentāri</h4>
                 <% } %>
@@ -88,26 +83,20 @@
                     <div class="card mb-3">
                       <div class="card-body">
                         <h5 class="card-title fs-5 border-bottom border-2">
-                          Autors: <%= review.author.username %>
+                          Autors: <%=review.author.username%>
                         </h5>
-                        <!-- <h6 class="card-subtitle mb-2 text-muted">By <%= review.author.username %> </h6> -->
                         <p class="card-text fs-6">
-                          <%= review.body %>
+                          <%=review.body%>
                         </p>
-                        <% if(currentUser && review.author.equals(currentUser._id)) { %>
-                          <form action="/laimesti/<%= winning._id %>/reviews/<%= review._id %>?_method=DELETE"
-                            method="POST">
+                        <% if(currentUser&&review.author.equals(currentUser._id)) { %>
+                          <form action="/laimesti/<%=winning._id%>/atsauksmes/<%=review._id%>?_method=DELETE"method="POST">
                             <button class="btn btn-sm btn-danger">Izdzēst</button>
                           </form>
                           <% } %>
-
                       </div>
-
                     </div>
                     <% } %>
-
         </div>
-
       </div>
       <div class="row mt-0">
         <div class="col-md-6 offset-md-3" id="linkAllWinnings">

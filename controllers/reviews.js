@@ -14,7 +14,7 @@ module.exports.createReview = async(req,res) =>{
 
 module.exports.deleteReview = async(req,res) =>{
     const {id, reviewId} = req.params;
-    await Review.findByIdAndUpdate(id, {$pull: {reviews: reviewId} });
+    await Winning.findByIdAndUpdate(id, {$pull: {reviews: reviewId} });
     await Review.findByIdAndDelete(reviewId);
     req.flash('success', 'Komentārs izdzēsts!')
     res.redirect(`/laimesti/${id}`);

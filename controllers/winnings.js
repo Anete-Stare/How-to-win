@@ -25,7 +25,7 @@ module.exports.showWinning = async (req, res) => {
         populate: {
             path: 'author'
         }
-    }).populate("author");
+    }).populate('author');
     if(!winning){
         req.flash('error','Nevar atrast laimestu!' );
         return res.redirect('/laimesti');
