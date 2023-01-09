@@ -1,3 +1,5 @@
+// here needs to find out, how to put concrete day's date, when the winning is created, below only shows today's date each day
+
 const date = new Date();
 
 let day = date.getDate();
